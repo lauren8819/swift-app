@@ -23,32 +23,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-09-lbD">
-                                <frame key="frameInset" minX="154" minY="116" width="67" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-09-lbD">
                                 <state key="normal" title="PUSH ME"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NrJ-I7-SEv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfa-ov-y00">
-                                <frame key="frameInset" minX="164" minY="194" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LN5-Nb-PBP"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELT-bf-VR5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HO2-pb-trL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GW-Xv-y4D">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="gDu-fS-nhR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6GW-Xv-y4D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BX0-gx-OAw"/>
                             <constraint firstItem="5Ed-09-lbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q3s-LS-jhe"/>
                             <constraint firstItem="NAO-et-fSa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="R8z-XJ-6no"/>
-                            <constraint firstItem="zfa-ov-y00" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tlr-pW-Dpc"/>
-                            <constraint firstItem="zfa-ov-y00" firstAttribute="top" secondItem="5Ed-09-lbD" secondAttribute="bottom" constant="10" id="Uv3-zp-7l1"/>
+                            <constraint firstItem="ELT-bf-VR5" firstAttribute="top" secondItem="5Ed-09-lbD" secondAttribute="bottom" constant="10" id="Ydw-Cu-QqV"/>
+                            <constraint firstItem="6GW-Xv-y4D" firstAttribute="top" secondItem="ELT-bf-VR5" secondAttribute="bottom" constant="10" id="aGA-2w-Ab9"/>
+                            <constraint firstItem="ELT-bf-VR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZy-Ln-pQc"/>
                             <constraint firstItem="NAO-et-fSa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kfE-t1-Gkx"/>
                             <constraint firstItem="5Ed-09-lbD" firstAttribute="top" secondItem="NAO-et-fSa" secondAttribute="bottom" constant="9" id="rbV-SF-1TX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="ELT-bf-VR5" id="LcJ-SK-7iG"/>
+                        <outlet property="text2" destination="6GW-Xv-y4D" id="izu-Fp-8CK"/>
                         <outlet property="theLabel" destination="NAO-et-fSa" id="DMX-lp-amX"/>
                     </connections>
                 </viewController>
